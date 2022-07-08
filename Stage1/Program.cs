@@ -56,7 +56,7 @@ namespace Stage1
             //}
             //Console.Write("\n\n");
 
-            // 5. Write a program in C# Sharp to check the username and password. Go to the editor
+            // 5. Write a program in C# Sharp to check the username and password. 
 
             string userName = "James";
             int password = 123456;
