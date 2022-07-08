@@ -8,20 +8,39 @@ namespace Stage1
         {
             // 1. Write a program in C# Sharp to input a string and print it. 
 
-            Console.Write("Input the string: ");
-            string dataFromConsole = Convert.ToString(Console.ReadLine());
+            //Console.Write("Input the string : ");
 
-            Console.WriteLine($"The string you entered is: {dataFromConsole}");
+            //string dataFromConsole = Convert.ToString(Console.ReadLine());
+
+            //Console.WriteLine($"The string you entered is : {dataFromConsole}");
 
             // 2. Write a program in C# Sharp to find the length of a string without using library function.
 
-            Console.Write("Input the string: ");
-            string askForUser = Convert.ToString(Console.ReadLine());
-            string lenghtOfText = askForUser.Length.ToString();
+            //Console.Write("Input the string : ");
 
-            Console.WriteLine(lenghtOfText);
+            //string askForUser = Convert.ToString(Console.ReadLine());
+
+            //string lengthOfText = askForUser.Length.ToString();
+
+            //Console.WriteLine($"Length of the string is : {lengthOfText}");
+
+            // 3.Write a program in C# Sharp to separate the individual characters from a string.
+
+            Console.Write("Input the string : ");
+
+            int i = 0;
+
+            string data = Convert.ToString(Console.ReadLine());
+
+            while (i < data.Length - 1)
+            {
+                Console.Write("{0} ",data[i]);
+                    i++;
+            }
+            Console.Write("\n\n");
 
 
         }
+
     }
 }
