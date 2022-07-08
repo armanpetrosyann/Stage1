@@ -42,19 +42,46 @@ namespace Stage1
             // 4. Write a program in C# Sharp to print individual
             // characters of the string in reverse order. Go to the editor Test Data :
 
-            int i = 0;
+            //int i = 0;
 
-            Console.Write("Input the string : ");
-            string str = Console.ReadLine();
+            //Console.Write("Input the string : ");
+            //string str = Console.ReadLine();
 
-            i = str.Length - 1;
-            
-            while (i >= 0)
+            //i = str.Length - 1;
+
+            //while (i >= 0)
+            //{
+            //    Console.Write("{0} ", str[i]);
+            //    i--;
+            //}
+            //Console.Write("\n\n");
+
+            // 5. Write a program in C# Sharp to check the username and password. Go to the editor
+
+            string userName = "James";
+            int password = 123456;
+
+            //Console.Write("Enter your name : ");
+            string askForName = Convert.ToString(Console.ReadLine());
+
+            while (askForName != userName)
             {
-                Console.Write("{0} ", str[i]);
-                i--;
+                Console.Write("Enter your name : ");
+                askForName = Convert.ToString(Console.ReadLine());
             }
-            Console.Write("\n\n");
+
+            Console.Write("Enter you password : ");
+            int askForPassword = Convert.ToInt32(Console.ReadLine());
+
+            while (askForPassword != password)
+            {
+                Console.Write("Enter your password : ");
+                askForPassword = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("You successfully signed in");
+
+
         }
 
     }
