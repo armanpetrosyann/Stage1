@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Lesson6
 {
@@ -23,7 +24,7 @@ namespace Lesson6
 
             // Method 2. Using Iterative way
 
-            int[] array = new int[] { 1, 9, 6, 7, 5, 9 };
+            int[] array = new int[] { 10, 30, 20, 40, 60, 50 };
 
             int temp;
 
@@ -43,6 +44,18 @@ namespace Lesson6
             {
                 Console.WriteLine(value + " ");
             }
+
+            // Method 3. Using LINQ descending
+
+            int[] myArr = new int[] { 1, 9, 6, 7, 5, 9 };
+
+            myArr = myArr.OrderByDescending(c => c).ToArray();
+
+            foreach (int value in myArr)
+            {
+                Console.WriteLine(value + " ");
+            }
+           
         }
     }
 }
