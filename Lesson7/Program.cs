@@ -148,6 +148,30 @@ namespace Lesson7
                 Console.WriteLine(name);
             }
 
+            // 10.Write a C# Sharp program to check whether a given substring is present in the given string. 
+
+            bool isMatches;
+
+            Console.Write("Input the string: ");
+
+            string askForStringFromUser = Convert.ToString(Console.ReadLine());
+
+            Console.Write("Input the substring to search: ");
+
+            string askForSearchText = Convert.ToString(Console.ReadLine());
+
+
+            isMatches = askForStringFromUser.Contains(askForSearchText);
+
+            if (isMatches)
+            {
+                Console.WriteLine("The substring exists in the string.");
+            }
+            else
+            {
+                Console.WriteLine("The substring is not exists in the string.");
+            }
+
         }
     }
 }
