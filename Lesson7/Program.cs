@@ -4,7 +4,7 @@ namespace Lesson7
 {
     internal class Program
     {
-        // Method to reverse string entered from console 
+        // Method to reverse string entered from Console 
 
         public static string Reverse(string Input)
         {
@@ -19,6 +19,47 @@ namespace Lesson7
 
             return reversedString;
         }
+
+        // Method to Compare of two strings from Console
+
+        public static bool CompareTwoValues(string firtString, string secondString)
+        {
+            bool isEqual = true;
+
+            int checker = 0;
+
+            if (firtString.Length != secondString.Length)
+            {
+                isEqual = false;
+            }
+
+            while (checker < firtString.Length && isEqual)
+            {
+                if (firtString[checker] != secondString[checker])
+                {
+                    isEqual = false;
+                }
+                checker++;
+            }
+            return isEqual;
+        }
+
+        // Check count of total number of alphabets 
+
+        //public static string CountOfAlphabets(string alphabet)
+        //{
+        //    int alp = 0;
+
+        //    while (alp < alphabet.Length)
+        //    {
+        //        if ((alphabet[alp] >= 'a' && (alphabet[alp] <= 'z') || (alphabet[alp] >= 'A' && alphabet[alp] <= 'Z')))
+        //        {
+        //            alp++;
+        //        }
+
+        //    }
+        //    return alp.ToString(); 
+        //}
 
         static void Main(string[] args)
         {
@@ -66,6 +107,47 @@ namespace Lesson7
             Console.WriteLine("Expected output: ");
 
             Console.WriteLine(Reverse(askForText));
+
+            // 4.Write a program in C# Sharp to compare two string without using string library functions. 
+
+            Console.Write("Input the 1st string: ");
+
+            string firstString = Convert.ToString(Console.ReadLine());
+
+            Console.Write("Input the 2nd string: ");
+
+            string secondString = Convert.ToString(Console.ReadLine());
+
+            Console.WriteLine(CompareTwoValues(firstString, secondString));
+
+            // 5.Write a program in C# Sharp to count a total number of alphabets, digits and special characters in a string. 
+
+            //int check = 0;
+
+            //Console.Write("Input the string: ");
+
+            //string strOne = Convert.ToString(Console.ReadLine());
+
+            //while (check < strOne.Length)
+            //{
+            //    if ((strOne[check] >= 'a' && strOne[check] <= 'z') || (strOne[check] >= 'A' && strOne[check] <= 'Z'))
+            //    {
+            //        check++;
+            //    }
+            //}
+            //Console.WriteLine(check);
+
+            // 7.Write a program in C# Sharp to sort a string array in ascending order.  
+
+            string[] array = { "Artur", "James", "Karen", "Derenick", "Robert" };
+
+            Array.Sort(array);
+
+            foreach (string name in array)
+            {
+                Console.WriteLine(name);
+            }
+
         }
     }
 }
