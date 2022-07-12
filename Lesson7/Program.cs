@@ -18,8 +18,24 @@ namespace Lesson7
             {
                 Console.Write(askForString[i] + " ");
             }
- 
-           
+
+            // 2.Write a program in C# Sharp to find the length of a string without using library function.
+
+            Console.WriteLine("Test Data: ");
+
+            Console.Write("Input the string: ");
+
+            string askForStr = Convert.ToString(Console.ReadLine());
+
+            int checker = 0;
+
+            foreach (char item in askForStr)
+            {
+                checker++;
+            }
+            Console.WriteLine($"Total number of letter in string is: {checker}");
+
+            
         }
     }
 }
